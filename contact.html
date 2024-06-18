@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjektTool</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .containerContact {
+            max-width: 600px;
+            margin: 1% auto;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            background-color: rgba(180, 179, 179, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-control {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: #fff;
+        }
+
+        .form-control:focus {
+            background: rgba(255, 255, 255, 0.3);
+            border: none;
+            box-shadow: none;
+        }
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .btn-custom {
+            background-color: #50C878;
+            border: none;
+            color: #fff;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn-custom:hover {
+            background-color: #3EA55B;
+        }
+        .containerContact h2 {
+                font-size: 3.5em;
+                animation: none;
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);;
+            }
+
+        .modal-custom .modal-content {
+            background-color: #030504d4;
+            color: #fff;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-custom .modal-header, .modal-custom .modal-footer {
+            border: none;
+        }
+
+        .modal-custom .modal-header {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .modal-custom .modal-footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .modal-custom .close {
+            color: #fff;
+            opacity: 1;
+        }
+        @media (max-width: 768px) {
+            .containerContact {
+                margin: 10% 5%;
+                padding: 15px;
+            }
+
+            .containerContact h2 {
+                font-size: 2.5em;
+            }
+
+        }
+
+        @media (max-width: 576px) {
+            .containerContact {
+                margin: 15% 3%;
+                padding: 10px;
+            }
+
+            .containerContact h2 {
+                font-size: 2em;
+            }
+
+            .form-control {
+                font-size: 14px;
+            }
+
+            .btn-custom {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand logo" href="index.html" style="font-weight: 700;">ProjektTool</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="background">
+        <div class="circle"></div>
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+    </div>
+
+    <div class="containerContact">
+        <h2 class="text-center forH">Get in Touch</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" style="color: white;">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" style="color: white;">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" style="color: white;">
+            </div>
+            <div class="form-group">
+                <label for="message">How Can I Help You?</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Describe your request" style="color: white;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-custom btn-block">Submit</button>
+        </form>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade modal-custom" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel" style="color: #50C878; text-align: left;"><b>Thank You!</b></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    We Have Recieved your Request and We will contact you soon via Whatsapp.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-custom" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        $('#contactModal').modal('show');
+        // Optionally, you can reset the form fields
+        event.target.reset();
+    });
+    </script>
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // Disable keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 'i' || e.key === 'I')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+    <!-- Minified and obfuscated JavaScript -->
+    <script>eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--)d[c.toString(a)]=k[c]||c.toString(a);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('2.4("3 5 6");',7,7,'||console|Hello|log|world|again'.split('|'),0,{}))</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@latest/dist/crate.app.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
