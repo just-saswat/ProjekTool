@@ -142,24 +142,24 @@
 
     <div class="containerContact">
         <h2 class="text-center forH">Get in Touch</h2>
-        <form id="contactForm">
+        <form id="contactForm" method="post">
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter your name" style="color: white;">
+                <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name" style="color: white;">
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email" style="color: white;">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" style="color: white;">
             </div>
             <div class="form-group">
                 <label for="phone">Phone Number</label>
-                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" style="color: white;">
+                <input type="tel" class="form-control" name="number" id="phone" placeholder="Enter your phone number" style="color: white;">
             </div>
             <div class="form-group">
                 <label for="message">How Can I Help You?</label>
-                <textarea class="form-control" id="message" rows="4" placeholder="Describe your request" style="color: white;"></textarea>
+                <textarea class="form-control" id="message" name="message" rows="4" placeholder="Describe your request" style="color: white;"></textarea>
             </div>
-            <button type="submit" class="btn btn-custom btn-block">Submit</button>
+            <button type="submit" value="Submit" class="btn btn-custom btn-block">Submit</button>
         </form>
     </div>
     <!-- Modal -->
@@ -173,7 +173,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    We Have Recieved your Request and We will contact you soon via Whatsapp.
+                    We Have Received your Request and We will contact you soon via Whatsapp.
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-custom" data-dismiss="modal">Close</button>
@@ -181,14 +181,31 @@
             </div>
         </div>
     </div>
+
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
-        $('#contactModal').modal('show');
-        // Optionally, you can reset the form fields
-        event.target.reset();
-    });
+            event.preventDefault(); // Prevent the default form submission
+
+            var formData = new FormData(this);
+
+            fetch('https://script.google.com/macros/s/AKfycbxLPlwAZrel3csJgvmbiDruSOJpXS-4GLXfAghi2FsxKa78ltcxiqYaUTFD5z1vqvKUWg/exec', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result === 'success') {
+                    $('#contactModal').modal('show');
+                    // Optionally, you can reset the form fields
+                    event.target.reset();
+                } else {
+                    console.error('Error:', data.error);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
     </script>
+
     <script>
         // Disable right-click
         document.addEventListener('contextmenu', function(e) {
@@ -204,9 +221,10 @@
     </script>
 
     <!-- Minified and obfuscated JavaScript -->
-    <script>eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--)d[c.toString(a)]=k[c]||c.toString(a);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('2.4("3 5 6");',7,7,'||console|Hello|log|world|again'.split('|'),0,{}))</script>
+    <script>eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--)d[c.toString(a)]=k[c]||c.toString(a);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('6.7(8(){3 a=4.5("b");a.c=8(){d.e("f").g()},h.9(a)},i);',19,19,'|||var|document|getElementById|window|onload|function|appendChild|s|script|onload|console|log|Hello|world|document|0'.split('|'),0,{}))</script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@latest/dist/crate.app.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
