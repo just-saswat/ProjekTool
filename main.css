@@ -399,6 +399,14 @@ p {
         width: 65px;
         height: 65px;
     }
+    #services .container{
+        padding: 0% ;
+        margin-left: 0%;
+    }
+    #services .container h2{
+        padding-left: 5%;
+    }
+    
 }
 
 .services {
@@ -409,7 +417,7 @@ p {
 
 .service {
     flex: 1 1 350px;
-    min-width: 350px;
+    width: 350px;
     margin: 10px;
     padding: 20px;
     background-color: #010101a2;
