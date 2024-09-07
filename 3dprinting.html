@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProjektTool</title>
+    <title>ProjektTool3D</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="3dprint.css">
 </head>
 <body>
+    <!-- NavBar Section -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand logo" href="index.html" style="font-weight: 700;">ProjektTool3D</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,13 +20,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="3dprinting.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Services</a>
+                    <a class="nav-link" href="#services">Services</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Blogs">Gallery</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
@@ -33,12 +37,13 @@
             </ul>
         </div>
     </nav>
+
     <!-- Home Section -->
     <div class="container" id="home">
         <h1>Welcome to</h1>
         <h2>ProjektTool3D</h2>
         <p>We offer a comprehensive range of high-quality 3D printing services tailored to meet your unique requirements, ensuring precision, reliability, and innovation in every project, all at an affordable price.</p>
-        <a href="#services" class="btn btn-custom">Learn More</a>
+        <a href="#services" class="btn btn-custom">Order Now</a>
     </div>
 
     <!-- Background Video Overlay -->
@@ -49,6 +54,146 @@
         <div class="video-overlay"></div>
     </div>
 
+    <!-- Service Offered Section -->
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services">
+                <div class="service rapid-prototyping">
+                    <h3>Rapid Prototyping</h3>
+                    <p>Turn your digital designs into physical models for testing and refinement, ensuring accuracy and functionality.</p>
+                    <a href="https://forms.gle/dVT6hnTdrTbNo3bK7" class="btn btn-custom">Learn More</a>
+                </div>
+                <div class="service prod">
+                    <h3>Custom Parts Production & Robotics</h3>
+                    <p>Create high-quality, custom parts for robotics with precision 3D printing, ensuring durability and functionality.</p>
+                    <a href="https://forms.gle/dVT6hnTdrTbNo3bK7" class="btn btn-custom">Learn More</a>
+                </div>
+                <div class="service m3d">
+                    <h3>Large-scale 3D Printing</h3>
+                    <p>Create large, detailed models and parts with precision, perfect for industrial prototypes and manufacturing</p>
+                    <a href="3dprinting.html" class="btn btn-custom">Learn More</a>
+                </div>
+                <div class="service decor">
+                    <h3>Lithophanes, Toys & Decoratives</h3>
+                    <p>Create stunning 3D-printed lithophanes that transform your photos into light-transmitting art, custom toys built for durability and creativity, and personalized decorative items that enhance your home or office with functional and beautiful designs.</p>
+                    <a href="contact.html" class="btn btn-custom">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Material We Offer -->
+    <section id="material">
+        <div class="container">
+            <h2>Materials We Offer</h2>
+            <ol class="mainList">
+                <li>PLA (Polylactic Acid):
+                    <ul class="mainHead">
+                        <li>Eco-friendly and easy to print, PLA is perfect for prototypes and decorative items.</li>
+                        <li>Low warping, vibrant colors.</li>
+                    </ul>
+                </li>
+                <li>ABS (Acrylonitrile Butadiene Styrene):
+                    <ul class="mainHead">
+                        <li>Strong and heat-resistant, ABS is ideal for functional and mechanical parts.</li>
+                        <li>High strength, durable.</li>
+                    </ul>
+                </li>
+                <li>PETG (Polyethylene Terephthalate Glycol):
+                    <ul class="mainHead">
+                        <li>Tough and flexible, PETG is great for functional parts and containers.</li>
+                        <li>Moisture-resistant, durable.</li>
+                    </ul>
+                </li>
+                <li>TPU (Thermoplastic Polyurethane):
+                    <ul class="mainHead">
+                        <li>Flexible and rubber-like, TPU is suitable for wearables and shock-absorbing parts.</li>
+                        <li>Elastic, impact-resistant.</li>
+                    </ul>
+                </li>
+                <li>ASA (Acrylonitrile Styrene Acrylate):
+                    <ul class="mainHead">
+                        <li>UV-resistant and durable, ASA is perfect for outdoor and weather-resistant applications.</li>
+                        <li>Weather-resistant, tough.</li>
+                    </ul>
+                </li>
+                <li>Nylon : 
+                    <ul class="mainHead">
+                        <li>Strong and flexible, Nylon is ideal for mechanical parts and gears.</li>
+                        <li>High strength, abrasion-resistant.</li>
+                    </ul>
+                </li>
+                <li>CF (Carbon Fiber) : 
+                    <ul class="mainHead">
+                        <li>Lightweight and strong, Carbon Fiber is used for high-performance parts.</li>
+                        <li>Rigid, high-strength.</li>
+                    </ul>
+                </li>
+                <li>Resin : 
+                    <ul class="mainHead">
+                        <li>High-resolution and smooth, Resin is perfect for detailed models and prototypes.</li>
+                        <li>Precision, smooth finish.</li>
+                    </ul>
+                </li>
+            </ol>
+        </div> 
+    </section>
+
+    <!-- Why Should You Choose Us -->
+     <section id="choose">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <div class="con">
+                <div class="fcontainer">
+                    <div class="fitem"><p>Quality Assurance</p></div>
+                    <div class="fitem"><p>Affordable Pricing</p></div>
+                    <div class="fitem"><p>Rapid Processing</p></div>
+                    <div class="fitem"><p>Customization Options</p></div>
+                    <div class="fitem"><p>Expert Support</p></div>
+                    <div class="fitem"><p>Enivronment Friendly</p></div>
+                </div>
+            </div>
+        </div>
+     </section>
+
+    <!-- WorkFlow -->
+    <section id="WorkFlow">
+        <div class="container">
+            <h2>Our Workflow</h2>
+            <div class="containerT">
+                <div class="wrapper">
+                  <ul class="sessions">
+                    <li class="tli">
+                      <div class="time">Fill Up the Form</div>
+                    </li>
+                    <li class="tli">
+                      <div class="time">Upload Your 3D Design</div>
+                    </li>
+                    <li class="tli">
+                      <div class="time">Choose Your Material and Specifications</div>
+                    </li>
+                    <li class="tli">
+                      <div class="time">Receive a Quote and Approve</div>
+                    </li>
+                    <li class="tli"> 
+                      <div class="time">50% Prepaid</div>
+                    </li>
+                    <li class="tli">
+                      <div class="time">Print and Ship</div>
+                    </li>
+                    <li class="tli">
+                      <div class="time">50% After Delivering </div>
+                    </li>
+                    <li class="tli">
+                      <div class="time">Rate Us to Get Additional Discount</div>
+                    </li>
+                  </ul>
+                </div>
+              </div> 
+        </div>
+    </section>
+
     <!-- About Us Section -->
     <section id="about">
         <div class="container">
@@ -56,6 +201,8 @@
             <p>We are a group of professionals specializing in various fields, dedicated to delivering high-quality products at affordable prices. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus fermentum, vehicula ipsum eu, aliquam quam.</p>
         </div>
     </section>
+
+
 
     <!-- Contact Us Section -->
     <section id="contact">
@@ -69,6 +216,8 @@
             </div>
         </div>
     </section>
+
+    <!-- BackGround Animation -->
     <div class="background">
         <div class="circle"></div>
         <div class="circle1"></div>
