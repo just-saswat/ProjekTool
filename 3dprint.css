@@ -410,26 +410,30 @@ footer {
 }
 
 /* Materials Offered Style */
-.mainList{
-    font-weight: bolder;
-    font-size: 1.4rem;
-    color: #50c852;
-    text-shadow: 3px 3px 4px black;
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;
-    padding-left: auto;
-    margin-left: 2.5%;
-}
 .mainHead{
-    color: #dcdbdb;
-    font-size: 1.1rem;
-    list-style-type: disc;
+    text-align: left;
 }
-
+.an{
+    background-color: black !important;
+    padding-top: 0% !important;
+    padding-bottom: 0% !important;
+}
+h4{
+    color: #50c852;
+    font-weight: bolder;
+    margin-top: -10%;
+}
+.an div{
+    max-height: 200px;
+    min-height: 200px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
 .bd{
     background-color: #000000b0;
     border: 1px solid #50c852;
     border-radius: 20px;
+    padding: 20px;
     overflow: hidden;
 }
 
